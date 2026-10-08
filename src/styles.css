@@ -1,0 +1,48 @@
+@import "tailwindcss";
+@import "@fontsource/outfit/400.css";
+@import "@fontsource/outfit/500.css";
+@import "@fontsource/outfit/600.css";
+@import "@fontsource/fraunces/600.css";
+
+@theme {
+  --font-sans: "Outfit", "PingFang SC", "Noto Sans SC", "Microsoft YaHei", sans-serif;
+  --font-display: "Fraunces", "Songti SC", "Noto Serif SC", "Source Han Serif SC", serif;
+  --color-bg: #f3eee6;
+  --color-ink: #1b1714;
+  --color-muted: #6e655c;
+  --color-surface: #fffdf8;
+  --color-line: #e3d9cc;
+  --color-chip: #efe6da;
+  --color-accent: #c44924;
+  --color-accent-ink: #fff7f2;
+  --color-stage: #1b1714;
+  --color-stage-fg: #f6f1ea;
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background: var(--color-bg);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
